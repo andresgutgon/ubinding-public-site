@@ -5,8 +5,8 @@ import Home from '../components/Home'
 export default ({ data }) => <Home data={data} />
 
 export const query = graphql`
-  query indexquery {
-    allDatoCmsWork(filter: {locale: {eq: "es"}}, sort: { fields: [position], order: ASC }) {
+  query IndexQueryCa {
+    allDatoCmsWork(filter: {locale: {eq: "ca"}}, sort: { fields: [position], order: ASC }) {
       edges {
         node {
           id
