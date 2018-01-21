@@ -5,7 +5,7 @@ import { HelmetDatoCms } from 'gatsby-source-datocms'
 import { getCurrentLangKey, getLangs, getUrlForLang } from 'ptz-i18n'
 import { IntlProvider } from 'react-intl'
 
-import  SelectLanguage from './components/SelectLanguage'
+import  SelectLanguage from './SelectLanguage'
 
 import '../styles/index.sass'
 
