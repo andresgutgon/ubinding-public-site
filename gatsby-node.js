@@ -11,17 +11,21 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
           edges {
             node {
               slug
+              locale
             }
           }
         }
       }
     `).then(result => {
       result.data.allDatoCmsWork.edges.map(({ node: work }) => {
+        const { slug, locale } = work
+        const localizedPath = locale == 'es' ? 'trabajos' : 'treballs'
         createPage({
-          path: `works/${work.slug}`,
+          path: `${locale}/${localizedPath}/${work.slug}`,
           component: path.resolve(`./src/templates/work.js`),
           context: {
-            slug: work.slug,
+            slug,
+            locale
           },
         })
       })
