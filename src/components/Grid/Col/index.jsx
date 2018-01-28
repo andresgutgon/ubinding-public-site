@@ -1,4 +1,20 @@
-import React from 'react'
+// @flow
+import * as React from 'react';
+
+type Props = {
+  children: React.Node,
+  xs?: number,
+  sm?: number,
+  md?: number,
+  lg?: number,
+  xl?: number,
+  hidden_xs?: boolean,
+  hidden_sm?: boolean,
+  hidden_md?: boolean,
+  hidden_lg?: boolean,
+  hidden_xl?: boolean,
+  offset?: Object
+}
 
 const Col = ({
   xs,
@@ -13,7 +29,7 @@ const Col = ({
   hidden_xl,
   offset,
   children
-  }) => {
+  }: Props) => {
   let classNames = []
 
   if (xs) classNames.push(`col-xs-${xs}`)

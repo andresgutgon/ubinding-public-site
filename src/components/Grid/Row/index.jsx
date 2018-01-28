@@ -1,6 +1,11 @@
-import React from 'react'
+// @flow
+import * as React from 'react';
 
-const Row = ({ children }) => (
+type Props = {
+  children: React.Node
+}
+
+const Row = ({ children }: Props) => (
   <div className='row'>{children}</div>
 )
 

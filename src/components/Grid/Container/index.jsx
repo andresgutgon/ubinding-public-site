@@ -1,6 +1,11 @@
-import React from 'react'
+// @flow
+import * as React from 'react';
 
-const Container = ({ children }) => (
+type Props = {
+  children: React.Node
+}
+
+const Container = ({ children }: Props) => (
   <div className='container'>{children}</div>
 )
 
