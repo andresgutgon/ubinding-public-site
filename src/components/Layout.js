@@ -7,7 +7,7 @@ import { IntlProvider } from 'react-intl'
 
 import  SelectLanguage from './SelectLanguage'
 
-import '../styles/index.sass'
+import '../styles/index.scss'
 
 export default ({ children, data, location, i18nMessages }) => {
   const url = location.pathname;
@@ -37,9 +37,6 @@ export default ({ children, data, location, i18nMessages }) => {
             <ul className="sidebar__menu">
               <li>
                 <Link to="/">Home</Link>
-              </li>
-              <li>
-                <Link to="/about">About</Link>
               </li>
             </ul>
             <p className="sidebar__social">
