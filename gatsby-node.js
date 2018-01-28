@@ -10,6 +10,16 @@ exports.modifyBabelrc = ({ babelrc }) => (
   )
 )
 
+// Absolute imports like
+// ex.: import Layout from 'components/Layout'
+exports.modifyWebpackConfig = ({ config, _stage }) => {
+  return config.merge({
+    resolve: {
+      root: path.resolve(config._config.context, 'src'),
+    },
+  })
+}
+
 exports.createPages = ({ graphql, boundActionCreators }) => {
   const { createPage } = boundActionCreators
 

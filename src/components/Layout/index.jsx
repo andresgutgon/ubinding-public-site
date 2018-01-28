@@ -10,7 +10,10 @@ type Props = {
 
 export default class Layout extends React.Component<Props> {
   render () {
-    const { children } = this.props
+    const { children, transparent } = this.props
+
+    if (transparent) return null
+
     return (
       <div className={styles.layout}>
         {children}
