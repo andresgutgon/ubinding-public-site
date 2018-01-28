@@ -1,11 +1,20 @@
-import React from 'react'
+// @flow
+import * as React from 'react';
 
 import styles from './index.module.scss'
 
-export default class Layout extend React.Component {
+type Props = {
+  children: React.Node,
+  transparent: boolean
+}
+
+export default class Layout extends React.Component<Props> {
   render () {
-    <div className={styles.layout}>
-    </div>
+    const { children } = this.props
+    return (
+      <div className={styles.layout}>
+        {children}
+      </div>
+    )
   }
 }
-)

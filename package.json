@@ -1,34 +1,35 @@
 {
+  "version": "1.0.0",
   "name": "ubinding-public-site",
   "description": "Ubinding public site",
-  "version": "1.0.0",
   "author": "Andres Gutierrez <yoseduj@hotmail.com>",
+  "scripts": {
+    "build": "gatsby build",
+    "dev": "gatsby develop",
+    "flow": "flow --color always",
+    "flow:stop": "node_modules/flow-bin/cli.js stop",
+    "format": "prettier --trailing-comma es5 --no-semi --single-quote --write \"src/**/*.js\""
+  },
+  "license": "MIT",
+  "main": "n/a",
   "dependencies": {
     "dotenv": "4.0.0",
+    "flexboxgrid": "6.3.1",
     "gatsby": "1.9.166",
     "gatsby-image": "1.0.27",
     "gatsby-link": "1.6.28",
     "gatsby-plugin-i18n": "0.4.1",
     "gatsby-plugin-react-helmet": "1.0.8",
     "gatsby-plugin-sass": "1.0.14",
+    "gatsby-source-datocms": "1.0.17",
     "gatsby-source-filesystem": "1.5.9",
     "gatsby-transformer-remark": "1.7.23",
-    "gatsby-source-datocms": "1.0.17",
     "intl": "1.2.5",
-    "react-intl": "2.4.0",
-    "flexboxgrid": "6.3.1"
-  },
-  "keywords": [
-    "gatsby"
-  ],
-  "license": "MIT",
-  "main": "n/a",
-  "scripts": {
-    "build": "gatsby build",
-    "dev": "gatsby develop",
-    "format": "prettier --trailing-comma es5 --no-semi --single-quote --write \"src/**/*.js\""
+    "react-intl": "2.4.0"
   },
   "devDependencies": {
+    "babel-preset-flow": "^6.23.0",
+    "flow-bin": "^0.64.0",
     "prettier": "^1.8.2"
   }
 }

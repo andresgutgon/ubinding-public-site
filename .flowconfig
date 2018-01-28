@@ -1,0 +1,15 @@
+[ignore]
+
+[include]
+<PROJECT_ROOT>/src/.*
+
+[libs]
+
+[lints]
+
+[options]
+esproposal.class_instance_fields=enable
+esproposal.decorators=ignore
+module.name_mapper='.*\(.s?css\)' -> '<PROJECT_ROOT>/flow/stubs/css-modules.js'
+
+[strict]
