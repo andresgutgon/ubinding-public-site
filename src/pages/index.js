@@ -15,6 +15,12 @@ export const query = graphql`
           html
         }
       }
+      image {
+        url
+        sizes(maxWidth: 600, imgixParams: { fm: "jpg", auto: "compress" }) {
+          ...GatsbyDatoCmsSizes
+        }
+      }
     }
   }
 `

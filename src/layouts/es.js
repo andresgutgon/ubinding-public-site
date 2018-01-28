@@ -36,7 +36,6 @@ export const query = graphql`
     datoCmsSite {
       globalSeo {
         siteName
-        fallbackSeo
       }
       faviconMetaTags {
         ...GatsbyDatoCmsFaviconMetaTags

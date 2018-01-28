@@ -26,7 +26,6 @@ export default ({ children, data, location, i18nMessages }) => {
       <div>
         <HelmetDatoCms
           favicon={data.datoCmsSite.faviconMetaTags}
-          seo={data.datoCmsSite.fallbackSeo}
         />
         {children()}
       </div>
