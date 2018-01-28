@@ -4,7 +4,7 @@ import { addLocaleData } from 'react-intl'
 import ca from 'react-intl/locale-data/ca'
 
 import messages from '../data/messages/ca'
-import Layout from '../components/Layout'
+import Provider from '../components/Provider'
 
 addLocaleData(ca)
 
@@ -16,10 +16,10 @@ export default (props) => {
     ], function (require) {
       require('intl')
       require('intl/locale-data/jsonp/ca.js')
-      return (<Layout {...props} i18nMessages={messages} />)
+      return (<Provider {...props} i18nMessages={messages} />)
     });
   } else {
-    return (<Layout {...props} i18nMessages={messages} />)
+    return (<Provider {...props} i18nMessages={messages} />)
   }
 }
 
@@ -39,25 +39,6 @@ export const query = graphql`
       }
       faviconMetaTags {
         ...GatsbyDatoCmsFaviconMetaTags
-      }
-    }
-    datoCmsHome {
-      seoMetaTags {
-        ...GatsbyDatoCmsSeoMetaTags
-      }
-      introTextNode {
-        childMarkdownRemark {
-          html
-        }
-      }
-      copyright
-    }
-    allDatoCmsSocialProfile(filter: {locale: { eq: "ca" } }, sort: { fields: [position], order: ASC }) {
-      edges {
-        node {
-          profileType
-          url
-        }
       }
     }
   }

@@ -4,7 +4,7 @@ import { addLocaleData } from 'react-intl'
 import es from 'react-intl/locale-data/es'
 
 import messages from '../data/messages/es'
-import Layout from '../components/Layout'
+import Provider from '../components/Provider'
 
 addLocaleData(es)
 
@@ -16,10 +16,10 @@ export default (props) => {
     ], function (require) {
       require('intl')
       require('intl/locale-data/jsonp/es.js')
-      return (<Layout {...props} i18nMessages={messages} />)
+      return (<Provider {...props} i18nMessages={messages} />)
     });
   } else {
-    return (<Layout {...props} i18nMessages={messages} />)
+    return (<Provider {...props} i18nMessages={messages} />)
   }
 }
 
@@ -36,28 +36,10 @@ export const query = graphql`
     datoCmsSite {
       globalSeo {
         siteName
+        fallbackSeo
       }
       faviconMetaTags {
         ...GatsbyDatoCmsFaviconMetaTags
-      }
-    }
-    datoCmsHome {
-      seoMetaTags {
-        ...GatsbyDatoCmsSeoMetaTags
-      }
-      introTextNode {
-        childMarkdownRemark {
-          html
-        }
-      }
-      copyright
-    }
-    allDatoCmsSocialProfile(filter: {locale: { eq: "es" } }, sort: { fields: [position], order: ASC }) {
-      edges {
-        node {
-          profileType
-          url
-        }
       }
     }
   }
