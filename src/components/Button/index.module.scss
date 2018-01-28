@@ -1,0 +1,86 @@
+@import '../../styles/variables/fonts';
+@import '../../styles/variables/colors';
+
+.base {
+  @include font-size(5);
+  font-weight: 600;
+  border-radius: 5px;
+  border: 2px solid transparent;
+  box-sizing: border-box;
+  color: white;
+  cursor: pointer;
+  display: block;
+  font-family: $font_stack;
+  outline: none;
+  text-align: center;
+  text-decoration: none;
+  width: 100%;
+
+  &.smaller {
+    padding: .3rem 1.3rem;
+  }
+
+  &.small {
+    padding: .8rem 2rem;
+  }
+
+  &.medium {
+    padding: 1.3rem 2.3rem;
+  }
+
+  &.big {
+    @include font-size(3);
+    font-weight: 400;
+    padding: 1.8rem 3rem;
+  }
+}
+
+.collapsed {
+  width: auto;
+}
+
+.rounded {
+  border-radius: 20rem;
+}
+
+.default {
+  @extend .base;
+
+  &:disabled {
+    opacity: .5;
+    cursor: default;
+  }
+
+  &.disabled {
+    cursor: default;
+    opacity: .5;
+    pointer-events: none;
+  }
+  &.brand {
+    background-color: $brand;
+
+    &:active, &:focus {
+      background-color: darken($brand, 10%);
+    }
+  }
+}
+
+.outline {
+  @extend .base;
+  background: transparent;
+
+  &:disabled {
+    opacity: .5;
+    cursor: default;
+  }
+
+  &.negative {
+    border-color: white;
+    color: white;
+
+    &:active, &:focus {
+      border-color: darken(white, 10%);
+      color: darken(white, 10%);
+    }
+  }
+}

@@ -1,5 +1,5 @@
 @import '../../../styles/variables/colors';
-@import url('https://fonts.googleapis.com/css?family=Roboto:400,700');
+@import '../../../styles/variables/fonts';
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -16,8 +16,6 @@ time, mark, audio, video {
   margin: 0;
   padding: 0;
   border: 0;
-  font-size: 100%;
-  font: inherit;
   vertical-align: baseline;
 }
 
@@ -26,9 +24,17 @@ footer, header, hgroup, menu, nav, section {
   display: block;
 }
 
-body {
-  line-height: 1;
+html {
+  font-size: 62.5%;
 }
+body {
+  font-family: $font_stack;
+  font-size: 1.6rem;
+  line-height: 1;
+  color: $grey1;
+  background-color: $grey8;
+}
+
 
 ol, ul {
   list-style: none;
@@ -47,14 +53,6 @@ q:before, q:after {
 table {
   border-collapse: collapse;
   border-spacing: 0;
-}
-
-body {
-  font-family: Roboto, Helvetica, Arial, sans-serif;
-  font-size: 16px;
-  line-height: 1.5;
-  color: $grey1;
-  background-color: $grey8;
 }
 
 img {

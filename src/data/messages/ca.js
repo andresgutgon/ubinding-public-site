@@ -3,5 +3,8 @@ module.exports = {
   'languages': {
     ca: 'Català',
     es: 'Castellà'
+  },
+  home: {
+    cta: 'Demana informació'
   }
 };

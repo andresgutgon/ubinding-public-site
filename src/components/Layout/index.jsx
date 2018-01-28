@@ -1,7 +1,7 @@
 // @flow
 import * as React from 'react';
 
-import styles from './index.module.scss'
+import Header from 'components/Header'
 
 type Props = {
   children: React.Node,
@@ -11,11 +11,9 @@ type Props = {
 export default class Layout extends React.Component<Props> {
   render () {
     const { children, transparent } = this.props
-
-    if (transparent) return null
-
     return (
-      <div className={styles.layout}>
+      <div>
+        <Header transparent={transparent} />
         {children}
       </div>
     )
