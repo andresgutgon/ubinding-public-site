@@ -1,6 +1,9 @@
 # Ubiding.cat
 Public site for Ubiding project
 
+### COMMON PROBLEMS
+1. Remember to use node > v.8
+
 ## Usage
 
 First, install the dependencies of this project:
