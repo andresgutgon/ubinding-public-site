@@ -5,7 +5,7 @@
   "author": "Andres Gutierrez <yoseduj@hotmail.com>",
   "dependencies": {
     "dotenv": "4.0.0",
-    "gatsby": "1.9.164",
+    "gatsby": "1.9.172",
     "gatsby-image": "1.0.27",
     "gatsby-link": "1.6.28",
     "gatsby-plugin-react-helmet": "1.0.8",
